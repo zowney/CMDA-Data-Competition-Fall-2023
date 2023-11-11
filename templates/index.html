@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Calculator</title>
+</head>
+<body>
+    <h1>Enter all Fields to Determine if your case if Fraudulent</h1>
+    <form method="POST">
+        <label for="Age">Age(19-64):</label>
+        <input type="text" name="Age" required><br>
+
+        <label for="Number Of Vehicles Involved">Number Of Vehicles Involved(1-4):</label>
+        <input type="text" name="Number Of Vehicles Involved" required><br>
+
+        <label for="Witnesses">Witnesses(0-3):</label>
+        <input type="text" name="Witnesses" required><br>
+
+        <label for="Bodily Injuries">Bodily Injuries(0-2):</label>
+        <input type="text" name="Bodily Injuries" required><br>
+
+        <label for="Injury Claim">Injury Claim:</label>
+        <input type="text" name="Injury Claim" required><br>
+
+        <label for="Property Claim">Property Claim:</label>
+        <input type="text" name="Property Claim" required><br>
+
+        <label for="Vehicle Claim">Vehicle Claim:</label>
+        <input type="text" name="Vehicle Claim" required><br>
+
+        <label for="Incident Severity">Incident Severity (Trivial, Minor, Major, Total):</label>
+        <input type="text" name="Incident Severity" required><br>
+
+        <button type="submit">Calculate Fraud</button>
+    </form>
+
+{% if total == 1 %}
+    <p>This case is most likely fraudulent</p>
+{% endif %}
+{% if total == 0 %}
+    <p>This case is most likely a real case</p>
+{% endif %}
+</body>
+</html>
